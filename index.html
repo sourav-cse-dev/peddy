@@ -6,7 +6,6 @@
     <title>Peddy</title>
     <link href="./styles/output.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/b6d1c08c2a.js" crossorigin="anonymous"></script>
-    <script src="./script/index.js" defer></script>
   </head>
 
   <body>
@@ -58,49 +57,21 @@
       </div>
     </header>
 
-    <!-- <ul id="selcted-container"></ul> -->
-
     <main>
       <!-- caytegory section  -->
       <section id="categoryContainer" class="flex gap-4 p-5 justify-center"></section>
 
+      <!-- loader -->
+      <!-- <span id="spinner" class="loading loading-spinner loading-xl"></span> -->
+
       <!-- pets container -->
       <section class="mt-8 flex justify-center">
+        <h1 id="status" class="text-center text-red-500">No data Found !!!!!!!!!</h1>
         <div id="petsContainer"></div>
       </section>
-
-      <!-- <section class="flex gap-4 p-5 w-full mx-auto justify-center" id="category-container"></section>
-
-      <section class="mt-8 flex justify-center">
-        <h1 id="status" class="text-center text-red-500">NO data Fund !!!!!!!!!</h1>
-
-        <div id="spiner" class="spiner">
-          <span class="loading loading-bars loading-xs"></span>
-          <span class="loading loading-bars loading-sm"></span>
-          <span class="loading loading-bars loading-md"></span>
-          <span class="loading loading-bars loading-lg"></span>
-          <span class="loading loading-bars loading-xl"></span>
-          <span class="loading loading-bars loading-lg"></span>
-          <span class="loading loading-bars loading-xl"></span>
-        </div>
-
-        <div id="petsContainer" class="pets-container">
-          <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
-          <dialog id="my_modal_1" class="modal">
-            <div class="modal-box">
-              <h3 class="text-lg font-bold">Hello!</h3>
-              <p class="py-4">Press ESC key or click the button below to close</p>
-              <div class="modal-action">
-                <form method="dialog">
-                  <button class="btn">Close</button>
-                </form>
-              </div>
-            </div>
-          </dialog>
-        </div>
-      </section> -->
     </main>
 
-    <!-- <footer></footer> -->
+    <footer></footer>
+    <script src="./script/index.js"></script>
   </body>
 </html>

@@ -1,3 +1,11 @@
+const hideLoader = (id) => {
+  document.getElementById.style.display = "none";
+};
+
+const displayLoader = (id) => {
+  document.getElementById.style.display = "block";
+};
+
 const loadCategory = async () => {
   const response = await fetch("https://openapi.programming-hero.com/api/peddy/categories");
   const data = await response.json();
@@ -19,12 +27,24 @@ const displayCategory = (categories) => {
 };
 
 const loadPetByCategory = async (petCategoryName) => {
+//   displayLoader("spinner");
   const response = await fetch(`https://openapi.programming-hero.com/api/peddy/category/${petCategoryName}`);
   const data = await response.json();
-  displayPetsByCategory(data.data);
+  if (data.data) {
+    displayPetsByCategory(data.data);
+    // hideLoader("spinner");
+  }
 };
 
 const displayPetsByCategory = (pets) => {
+  document.getElementById("petsContainer").style.display = "block";
+  document.getElementById("status").style.display = "none";
+
+  if (!pets.length) {
+    document.getElementById("petsContainer").style.display = "none";
+    document.getElementById("status").style.display = "block";
+  }
+
   const petsContainer = document.getElementById("petsContainer");
   petsContainer.innerHTML = "";
 
